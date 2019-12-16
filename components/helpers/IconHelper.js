@@ -6,5 +6,10 @@
  * 2. int duration: The duration of the toast. May be ToastExample.SHORT or
  *    ToastExample.LONG
  */
-import {NativeModules} from 'react-native';
-module.exports = NativeModules.IconExample;
+import {Platform,NativeModules} from 'react-native';
+
+if(Platform.OS == 'ios'){
+    module.exports = NativeModules.IconExample;
+}else{
+    module.exports = NativeModules.IconExample;
+}
